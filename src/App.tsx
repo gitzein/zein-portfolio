@@ -1,14 +1,14 @@
 import useTheme from "./hooks/useTheme";
+import { cn } from "./lib/utils";
 
 function App() {
   const [theme, setTheme] = useTheme();
 
   return (
     <main
-      className={
-        `h-screen bg-neutral-100 dark:bg-slate-900 ` +
-        (theme === "dark" ? "dark" : "")
-      }
+      className={cn(`h-screen bg-neutral-100 dark:bg-slate-900`, {
+        dark: theme === "dark",
+      })}
     >
       <h1 className="text-center text-6xl font-bold text-slate-900 dark:text-neutral-100">
         Zein's portfolio
