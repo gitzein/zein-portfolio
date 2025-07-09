@@ -1,3 +1,11 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+.technologies-container {
+    @apply flex w-full items-center gap-4 [&_svg]:size-12 [&_svg]:fill-slate-900 dark:[&_svg]:fill-neutral-100
+}
+
+.technology-container {
+    @apply flex flex-col items-center justify-center gap-2 text-center text-sm
+}
