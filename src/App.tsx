@@ -19,7 +19,6 @@ function App() {
       <button
         onClick={() => {
           setTheme(theme === "dark" ? "light" : "dark");
-          console.log(theme);
         }}
         className="cursor-pointer bg-black p-2 text-white"
       >

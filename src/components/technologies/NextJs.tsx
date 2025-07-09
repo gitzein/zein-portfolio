@@ -1,10 +1,10 @@
-import TypescriptSvg from "../svg/TypescriptSvg";
+import NextjsSvg from "../svg/NextjsSvg";
 
 function NextJs() {
   return (
     <div className="technology-container">
-      <TypescriptSvg />
-      <p>Typescript</p>
+      <NextjsSvg />
+      <p>NextJs</p>
     </div>
   );
 }
