@@ -1,4 +1,6 @@
-function CssSvg() {
+import type { SVGProps } from "react";
+
+function CssSvg(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -7,6 +9,7 @@ function CssSvg() {
       viewBox="0 0 1000 1000"
       role="img"
       aria-labelledby="css-logo-title css-logo-description"
+      {...props}
     >
       <title id="css-logo-title">CSS</title>
       <desc id="css-logo-description">

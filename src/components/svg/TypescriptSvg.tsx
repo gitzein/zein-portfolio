@@ -1,4 +1,6 @@
-function TypescriptSvg() {
+import type { SVGProps } from "react";
+
+function TypescriptSvg(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       fill="#000000"
@@ -6,6 +8,7 @@ function TypescriptSvg() {
       height="800px"
       viewBox="0 0 32 32"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <title>Typescript</title>
 

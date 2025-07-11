@@ -1,4 +1,6 @@
-function ExpressjsSvg() {
+import type { SVGProps } from "react";
+
+function ExpressjsSvg(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       fill="inherit"
@@ -7,6 +9,7 @@ function ExpressjsSvg() {
       viewBox="0 0 24 24"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <title>ExpressJs</title>
 

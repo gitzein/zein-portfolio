@@ -1,4 +1,6 @@
-function NextjsSvg() {
+import type { SVGProps } from "react";
+
+function NextjsSvg(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="800px"
@@ -8,6 +10,7 @@ function NextjsSvg() {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       preserveAspectRatio="xMidYMid"
+      {...props}
     >
       <title>NextJs</title>
 

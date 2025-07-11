@@ -1,4 +1,6 @@
-function NodejsSvg() {
+import type { SVGProps } from "react";
+
+function NodejsSvg(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       fill="inherit"
@@ -6,6 +8,7 @@ function NodejsSvg() {
       height="800px"
       viewBox="-1.5 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <title>NodeJs</title>
 

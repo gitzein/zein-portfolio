@@ -1,4 +1,6 @@
-function HtmlSvg() {
+import type { SVGProps } from "react";
+
+function HtmlSvg(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="800px"
@@ -7,6 +9,7 @@ function HtmlSvg() {
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      {...props}
     >
       <title>HTML</title>
       <desc>Created with Sketch.</desc>

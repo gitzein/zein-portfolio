@@ -12,7 +12,15 @@ type ThemeContextType = [
   Dispatch<SetStateAction<"dark" | "light">>,
 ];
 
-const initialState: ThemeContextType = ["dark", () => {}];
+let initTheme: "dark" | "light" = "light";
+
+const isPrefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+if (isPrefersDarkTheme.matches) {
+  initTheme = "dark";
+}
+
+const initialState: ThemeContextType = [initTheme, () => {}];
 
 const ThemeContext = createContext(initialState);
 

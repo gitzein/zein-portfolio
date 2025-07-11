@@ -1,10 +1,13 @@
-function ReactSvg() {
+import type { SVGProps } from "react";
+
+function ReactSvg(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="800px"
       height="800px"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <title>ReactJs</title>
       <rect width="24" height="24" fill="none" />

@@ -1,33 +1,34 @@
-import Css from "./Css";
-import ExpressJs from "./ExpressJs";
-import Html from "./Html";
-import Javascript from "./Javascript";
-import NextJs from "./NextJs";
-import NodeJs from "./NodeJs";
-import ReactJs from "./ReactJs";
-import Tailwind from "./Tailwind";
+import CssSvg from "../svg/CssSvg";
+import ExpressjsSvg from "../svg/ExpressjsSvg";
+import HtmlSvg from "../svg/HtmlSvg";
+import JavascriptSvg from "../svg/JavascriptSvg";
+import NextjsSvg from "../svg/NextjsSvg";
+import NodejsSvg from "../svg/NodejsSvg";
+import ReactSvg from "../svg/ReactSvg";
+import TailwindSvg from "../svg/TailwindSvg";
+import TypescriptSvg from "../svg/TypescriptSvg";
 import TechCategory from "./TechCategory";
-import Typescript from "./Typescript";
+import Technology from "./Technology";
 
 function Technologies() {
   return (
     <div className="space-y-2 text-lg font-semibold">
       <TechCategory categoryName="Markup/Styling Languages & Libraries">
-        <Html />
-        <Css />
-        <Tailwind />
+        <Technology children={<HtmlSvg />} name="Html" />
+        <Technology children={<CssSvg />} name="Css" />
+        <Technology children={<TailwindSvg />} name="Tailwindcss" />
       </TechCategory>
       <TechCategory categoryName="Programming Languages">
-        <Javascript />
-        <Typescript />
+        <Technology children={<JavascriptSvg />} name="Javacript" />
+        <Technology children={<TypescriptSvg />} name="Typescript" />
       </TechCategory>
       <TechCategory categoryName="Frontend Frameworks/Libraries">
-        <ReactJs />
-        <NextJs />
+        <Technology children={<ReactSvg />} name="ReactJs" />
+        <Technology children={<NextjsSvg />} name="NextJs" />
       </TechCategory>
       <TechCategory categoryName="Backend Technologies">
-        <NodeJs />
-        <ExpressJs />
+        <Technology children={<NodejsSvg />} name="NodeJs" />
+        <Technology children={<ExpressjsSvg />} name="ExpressJs" />
       </TechCategory>
     </div>
   );
