@@ -2,10 +2,18 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@config "../tailwind.config.ts";
+
 .technologies-container {
-    @apply flex w-full items-center gap-4 [&_svg]:size-12 [&_svg]:fill-slate-900 dark:[&_svg]:fill-neutral-100
+  @apply flex w-full items-center gap-4 [&_svg]:size-12 [&_svg]:fill-slate-900 dark:[&_svg]:fill-neutral-100;
 }
 
 .technology-container {
-    @apply flex flex-col items-center justify-center gap-2 text-center text-sm
+  @apply flex flex-col items-center justify-center gap-2 text-center text-sm;
+}
+
+.background-star {
+  background-image: url("/assets/asfalt-light.png");
+  background-size: 500px;
+  background-color: #0a0a0a;
 }
