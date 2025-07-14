@@ -12,8 +12,237 @@
   @apply flex flex-col items-center justify-center gap-2 text-center text-sm;
 }
 
+/* ref starfalls: https://codesandbox.io/p/sandbox/css-shooting-stars-animation-w96ut?file=%2Fstyle.css%3A26%2C6 */
+
 .background-star {
   background-image: url("/assets/asfalt-light.png");
   background-size: 500px;
-  background-color: #0a0a0a;
+  background-color: #17111d;
+}
+
+.star-container {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: url(./bg0.jpg); */
+  /* background-position-x: center; */
+  /* background-size: cover; */
+  /* animation: animateBg 50s linear infinite; */
+}
+/* @keyframes animateBg {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+} */
+
+.star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: #efefef;
+  border-radius: 50%;
+  /* box-shadow:
+    0 0 0 4px rgba(255, 255, 255, 0.1),
+    0 0 0 8px rgba(255, 255, 255, 0.1),
+    0 0 20px #efefef; */
+  animation: animate-star 3s linear infinite;
+}
+
+.star::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #c1f1ff, transparent);
+  animation: animate-trail 5s linear infinite;
+}
+
+@keyframes animate-star {
+  0% {
+    transform: rotate(330deg) translateX(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.4;
+    box-shadow:
+      0 0 0 2px rgba(255, 255, 255, 0.1),
+      0 0 0 4px rgba(255, 255, 255, 0.1),
+      0 0 10px #efefef;
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow:
+      0 0 0 4px rgba(255, 255, 255, 0.1),
+      0 0 0 8px rgba(255, 255, 255, 0.1),
+      0 0 20px #efefef;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(330deg) translateX(-110vw);
+    opacity: 0;
+  }
+}
+@keyframes animate-trail {
+  0% {
+    width: 50px;
+  }
+
+  50% {
+    width: 300px;
+  }
+  100% {
+    width: 50px;
+  }
+}
+.star:nth-child(1) {
+  top: -1vh;
+  right: 0;
+  left: initial;
+  animation-delay: 0;
+  animation-duration: 2s;
+}
+
+.star:nth-child(1)::before {
+  animation-delay: 0;
+  animation-duration: 2s;
+  /* animation: animate-trail 2s linear infinite; */
+}
+
+.star:nth-child(2) {
+  top: -1vh;
+  right: 15%;
+  left: initial;
+  animation-delay: 0.4s;
+  animation-duration: 6s;
+}
+
+.star:nth-child(2)::before {
+  animation-delay: 0.4s;
+  animation-duration: 6s;
+  /* animation: animate-trail 6s linear infinite; */
+}
+
+.star:nth-child(3) {
+  top: 6%;
+  right: -1vw;
+  left: initial;
+  animation-delay: 0.8s;
+  animation-duration: 4s;
+}
+
+.star:nth-child(3)::before {
+  animation-delay: 0.8s;
+  animation-duration: 4s;
+  /* animation: animate-trail 4s linear infinite; */
+}
+
+.star:nth-child(4) {
+  top: -1vh;
+  right: 25%;
+  left: initial;
+  animation-delay: 1.2s;
+  animation-duration: 3s;
+}
+
+.star:nth-child(4)::before {
+  animation-delay: 1.2s;
+  animation-duration: 3s;
+  /* animation: animate-trail 3s linear infinite; */
+}
+
+.star:nth-child(5) {
+  top: 15%;
+  right: -1vw;
+  left: initial;
+  animation-delay: 1.6s;
+  animation-duration: 5s;
+}
+
+.star:nth-child(5)::before {
+  animation-delay: 1.6s;
+  animation-duration: 5s;
+  /* animation: animate-trail 5s linear infinite; */
+}
+
+.star:nth-child(6) {
+  top: -1vh;
+  right: 60%;
+  left: initial;
+  animation-delay: 2s;
+  animation-duration: 6s;
+}
+
+.star:nth-child(6)::before {
+  animation-delay: 2s;
+  animation-duration: 6s;
+  /* animation: animate-trail 6s linear infinite; */
+}
+
+.star:nth-child(7) {
+  top: 30%;
+  right: -1vw;
+  left: initial;
+  animation-delay: 2s;
+  animation-duration: 2.5s;
+}
+
+.star:nth-child(7)::before {
+  animation-delay: 2s;
+  animation-duration: 2.5s;
+  /* animation: animate-trail 2.5s linear infinite; */
+}
+
+.star:nth-child(8) {
+  top: 50%;
+  right: -1vw;
+  left: initial;
+  animation-delay: 2.8s;
+  animation-duration: 2.5s;
+}
+
+.star:nth-child(8)::before {
+  animation-delay: 2.8s;
+  animation-duration: 2.5s;
+  /* animation: animate-trail 2.5s linear infinite; */
+}
+
+.star:nth-child(9) {
+  top: 70%;
+  right: -1vw;
+  left: initial;
+  animation-delay: 1.5s;
+  animation-duration: 4.5s;
+}
+
+.star:nth-child(9)::before {
+  animation-delay: 1.5s;
+  animation-duration: 4.5s;
+  /* animation: animate-trail 4.5s linear infinite; */
+}
+
+.star:nth-child(10) {
+  top: 85%;
+  right: -1vw;
+  left: initial;
+  animation-delay: 5.5s;
+  animation-duration: 4.5s;
+}
+
+.star:nth-child(10)::before {
+  animation-delay: 5.5s;
+  animation-duration: 4.5s;
+  /* animation: animate-trail 4.5s linear infinite; */
 }
