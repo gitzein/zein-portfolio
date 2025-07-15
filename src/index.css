@@ -5,11 +5,30 @@
 @config "../tailwind.config.ts";
 
 .technologies-container {
-  @apply flex w-full items-center gap-4 [&_svg]:size-12 [&_svg]:fill-slate-900 dark:[&_svg]:fill-neutral-100;
+  @apply flex w-full items-center justify-center gap-4 [&_svg]:size-9 [&_svg]:fill-neutral-100 dark:[&_svg]:fill-neutral-100;
 }
 
 .technology-container {
   @apply flex flex-col items-center justify-center gap-2 text-center text-sm;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #a3a3a3;
+  border-radius: 50px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #d4d4d4;
 }
 
 /* ref starfalls: https://codesandbox.io/p/sandbox/css-shooting-stars-animation-w96ut?file=%2Fstyle.css%3A26%2C6 */
@@ -64,7 +83,7 @@
   transform: translateY(-50%);
   width: 0;
   height: 1px;
-  background: linear-gradient(90deg, #c1f1ff, transparent);
+  background: linear-gradient(90deg, #ffd4b0, transparent);
   animation: animate-trail 5s linear infinite;
 }
 
@@ -112,12 +131,12 @@
   right: 0;
   left: initial;
   animation-delay: 0;
-  animation-duration: 2s;
+  animation-duration: 4s;
 }
 
 .star:nth-child(1)::before {
   animation-delay: 0;
-  animation-duration: 2s;
+  animation-duration: 4s;
   /* animation: animate-trail 2s linear infinite; */
 }
 
@@ -151,7 +170,7 @@
 
 .star:nth-child(4) {
   top: -1vh;
-  right: 25%;
+  right: 40%;
   left: initial;
   animation-delay: 1.2s;
   animation-duration: 3s;
@@ -178,8 +197,8 @@
 }
 
 .star:nth-child(6) {
-  top: -1vh;
-  right: 60%;
+  top: 25%;
+  right: -1vw;
   left: initial;
   animation-delay: 2s;
   animation-duration: 6s;
@@ -192,7 +211,7 @@
 }
 
 .star:nth-child(7) {
-  top: 30%;
+  top: 37%;
   right: -1vw;
   left: initial;
   animation-delay: 2s;
