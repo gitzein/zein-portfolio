@@ -14,7 +14,7 @@ function App() {
   const auroraColor = useMemo(
     () =>
       theme === "light"
-        ? ["#91da73", "#69b437", "#23643d"]
+        ? ["#00CF52", "#00C690", "#00DF96"]
         : ["#8aed07", "#0e392f", "#743c55"],
     [theme],
   );
@@ -22,7 +22,7 @@ function App() {
   return (
     <main
       className={cn(
-        `relative w-full overflow-hidden bg-sky-950 bg-[url(/assets/stardust.png)] text-neutral-100 dark:bg-[#08000a] dark:text-neutral-100`,
+        `relative w-full overflow-hidden bg-sky-900 bg-[url(/assets/stardust.png)] text-neutral-100 bg-blend-color-dodge dark:bg-[#08000a] dark:text-neutral-100 dark:bg-blend-normal`,
         {
           dark: theme === "dark",
         },
