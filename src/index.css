@@ -5,7 +5,7 @@
 @config "../tailwind.config.ts";
 
 .technologies-container {
-  @apply flex w-full items-center justify-center gap-4 [&_svg]:size-9 [&_svg]:fill-neutral-100 dark:[&_svg]:fill-neutral-100;
+  @apply flex w-full items-center justify-center gap-4 [&_svg]:size-5 [&_svg]:fill-neutral-100 md:[&_svg]:size-7 lg:[&_svg]:size-9 dark:[&_svg]:fill-neutral-100;
 }
 
 .technology-container {
@@ -264,4 +264,19 @@
   animation-delay: 5.5s;
   animation-duration: 4.5s;
   /* animation: animate-trail 4.5s linear infinite; */
+}
+
+.constellation-line {
+  position: relative;
+}
+
+.constellation-line::before {
+  width: 2px;
+  content: "";
+  background-color: #efefef;
+  height: 25px;
+  position: absolute;
+  bottom: 1px;
+  right: 50%;
+  transform: translateY(100%) translateX(50%);
 }
