@@ -25,7 +25,7 @@ function TechCategory({ categoryName, children, className }: PropsType) {
       }}
       viewport={{ margin: "-10% 0px -10% 0px" }}
       transition={{ ease: "easeIn", duration: 0.8 }}
-      className={cn("space-y-2", className)}
+      className={cn("space-y-4", className)}
     >
       <p>{categoryName}</p>
       <div className="technologies-container">{children}</div>

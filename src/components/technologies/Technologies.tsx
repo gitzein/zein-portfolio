@@ -12,7 +12,7 @@ import Technology from "./Technology";
 
 function Technologies() {
   return (
-    <div className="flex flex-col items-center justify-center gap-5 py-8 text-base font-semibold">
+    <div className="flex flex-col items-center justify-center gap-5 text-base font-semibold">
       <TechCategory categoryName="Markup/Styling Languages & Libraries">
         <Technology children={<HtmlSvg />} name="Html" />
         <Technology children={<CssSvg />} name="Css" />

@@ -1,4 +1,7 @@
+import { useScroll } from "motion/react";
 import SkyBackground from "./components/background/SkyBackground";
+import SectionWrapper from "./components/SectionWrapper";
+import SideNav from "./components/SideNav";
 import Technologies from "./components/technologies/Technologies";
 import ThemeButton from "./components/ThemeButton";
 import useTheme from "./hooks/useTheme";
@@ -6,6 +9,7 @@ import { calculateAge, cn } from "./lib/utils";
 
 function App() {
   const [theme] = useTheme();
+  const { scrollYProgress } = useScroll();
 
   return (
     <main
@@ -17,22 +21,12 @@ function App() {
       )}
     >
       <SkyBackground />
-      <div className="custom-scrollbar relative z-50 w-full overflow-y-auto">
-        <div className="fixed top-4 right-4 w-fit">
+      <div className="custom-scrollbar relative z-50 mx-auto w-full overflow-y-auto md:w-3/4 lg:w-2/3">
+        <div className="fixed top-4 right-4 block w-fit lg:hidden">
           <ThemeButton />
         </div>
-        <div className="fixed top-[50%] right-10 flex -translate-y-[50%] justify-start gap-4 text-sm max-lg:hidden">
-          <div className="flex flex-col items-center gap-4">
-            <a href="#about">About</a>
-            <a href="#tech">Technology</a>
-            <a href="#project">Projects</a>
-            <a href="#edu">Education</a>
-          </div>
-        </div>
-        <section
-          id="about"
-          className="flex min-h-screen flex-col items-center justify-center gap-8"
-        >
+        <SideNav scrollYProgress={scrollYProgress} />
+        <SectionWrapper id="about" className="justify-center">
           <p className="text-center text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">
             Zein Farhan Makarim
           </p>
@@ -41,39 +35,20 @@ function App() {
             <p>Bekasi, Indonesia</p>
             <p>{calculateAge("March 25, 2000")} years old</p>
           </div>
-        </section>
+        </SectionWrapper>
 
-        <section
-          id="tech"
-          className="flex min-h-screen flex-col items-center justify-center"
-        >
-          <p className="text-center text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">
-            Technologies
-          </p>
-
+        <SectionWrapper id="tech" title="Technologies">
           <Technologies />
-        </section>
-
-        <section
-          id="project"
-          className="flex min-h-screen flex-col items-center justify-center"
-        >
-          <p className="text-center text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">
-            Projects
-          </p>
-
+        </SectionWrapper>
+        <SectionWrapper id="project" title="Projects">
+          <p>Digist: a photo sharing platform</p>
+          <div>
+            <div className="size-36 bg-violet-300/50"></div>
+          </div>
+        </SectionWrapper>
+        <SectionWrapper id="edu" title="Education">
           <Technologies />
-        </section>
-        <section
-          id="edu"
-          className="flex min-h-screen flex-col items-center justify-center"
-        >
-          <p className="text-center text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">
-            Education
-          </p>
-
-          <Technologies />
-        </section>
+        </SectionWrapper>
       </div>
     </main>
   );

@@ -86,7 +86,7 @@ export default function ThemeButton() {
         <motion.path
           variants={shineVariant}
           d={moonPath}
-          className={"absolute top-0 left-0 stroke-neutral-100"}
+          className={"absolute top-0 left-0 z-[51] stroke-neutral-50"}
           initial="hidden"
           animate={theme === "dark" ? "visible" : "hidden"}
         />
@@ -121,8 +121,8 @@ export default function ThemeButton() {
             animate={{
               rotate: -360,
               scale: 2,
-              stroke: "var(--color-neutral-400)",
-              fill: "var(--color-neutral-400)",
+              stroke: "var(--color-neutral-300)",
+              fill: "var(--color-neutral-300)",
               fillOpacity: 0.35,
               strokeOpacity: 1,
               transition: { delay: 0.1 },
