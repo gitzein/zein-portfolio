@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { cn } from "../lib/utils";
+import { cn } from "../../lib/utils";
 
 type PropsType = {
   children: ReactNode;
@@ -8,7 +8,7 @@ type PropsType = {
   id: string;
 };
 
-function SectionWrapper({ children, className, title, id }: PropsType) {
+function SectionContainer({ children, className, title, id }: PropsType) {
   return (
     <section
       id={id}
@@ -23,4 +23,4 @@ function SectionWrapper({ children, className, title, id }: PropsType) {
     </section>
   );
 }
-export default SectionWrapper;
+export default SectionContainer;

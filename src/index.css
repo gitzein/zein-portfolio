@@ -12,6 +12,10 @@
   @apply flex flex-col items-center justify-center gap-2 text-center text-sm;
 }
 
+.main-container {
+  @apply relative w-full overflow-hidden scroll-smooth bg-sky-900 bg-[url(/assets/stardust.png)] text-neutral-100 bg-blend-color-dodge dark:bg-[#08000a] dark:text-neutral-100 dark:bg-blend-normal;
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
   height: 6px;
