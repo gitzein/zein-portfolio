@@ -12,15 +12,15 @@ import Technology from "./Technology";
 
 function Technologies() {
   return (
-    <div className="flex flex-col items-center justify-center gap-5 text-base font-semibold">
+    <div className="flex h-full flex-col items-center justify-center gap-4 font-semibold lg:text-base">
       <TechCategory categoryName="Markup/Styling Languages & Libraries">
         <Technology children={<HtmlSvg />} name="Html" />
         <Technology children={<CssSvg />} name="Css" />
         <Technology children={<TailwindSvg />} name="Tailwindcss" />
       </TechCategory>
       <TechCategory categoryName="Programming Languages">
-        <Technology children={<JavascriptSvg />} name="Javacript" />
-        <Technology children={<TypescriptSvg />} name="Typescript" />
+        <Technology children={<JavascriptSvg />} name="JavaScript" />
+        <Technology children={<TypescriptSvg />} name="TypeScript" />
       </TechCategory>
       <TechCategory categoryName="Frontend Frameworks/Libraries">
         <Technology children={<ReactSvg />} name="ReactJs" />

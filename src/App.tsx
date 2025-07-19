@@ -9,6 +9,7 @@ import ThemeButton from "./components/button/ThemeButton";
 import useTheme from "./hooks/useTheme";
 import { cn } from "./lib/utils";
 import SectionsWrapper from "./components/layout/SectionsWrapper";
+import CertificateSection from "./components/section/CertificateSection";
 
 function App() {
   const [theme] = useTheme();
@@ -30,6 +31,7 @@ function App() {
         <TechSection />
         <ProjectSection />
         <EducationSection />
+        <CertificateSection />
       </SectionsWrapper>
     </main>
   );

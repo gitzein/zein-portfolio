@@ -1,16 +1,14 @@
+import { motion, MotionValue } from "motion/react";
 import Ping from "./Ping";
 import ThemeButton from "./button/ThemeButton";
-import { motion, MotionValue } from "motion/react";
 
-function SideNav({
-  scrollYProgress,
-}: {
+type PropsType = {
   scrollYProgress: MotionValue<number>;
-}) {
+};
+
+function SideNav({ scrollYProgress }: PropsType) {
   return (
-    <div className="fixed top-[50%] right-0 flex w-1/6 -translate-y-[50%] justify-start gap-4 text-sm max-lg:hidden">
-      {/* <StarBorder as="div" thickness={3} speed="5s">
-              </StarBorder> */}
+    <div className="fixed top-[50%] -right-5 flex w-1/6 -translate-y-[50%] justify-start gap-4 text-sm max-lg:hidden">
       <div className="flex flex-col items-center gap-2">
         <div className="w-fit max-md:hidden">
           <ThemeButton />
@@ -30,6 +28,9 @@ function SideNav({
               <li>
                 <a href="#edu">Education</a>
               </li>
+              <li>
+                <a href="#certificate">Certificate</a>
+              </li>
             </ul>
           </nav>
           <div className="absolute top-[50%] -right-4 translate-x-[100%] -translate-y-[50%]">
@@ -48,6 +49,7 @@ function SideNav({
                   backgroundColor: "#c4b4ff",
                 }}
               />
+              <Ping />
               <Ping />
               <Ping />
               <Ping />
