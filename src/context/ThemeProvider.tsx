@@ -28,7 +28,7 @@ type ChildrenType = { children?: ReactElement | ReactElement[] | ReactNode };
 
 export const ThemeProvider = ({ children }: ChildrenType) => {
   return (
-    <ThemeContext.Provider value={useState<"dark" | "light">("dark")}>
+    <ThemeContext.Provider value={useState<"dark" | "light">(initTheme)}>
       {children}
     </ThemeContext.Provider>
   );

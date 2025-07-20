@@ -16,7 +16,6 @@ function ArrowTopRightSvg(props: SVGProps<SVGSVGElement>) {
       color="inherit"
       {...props}
     >
-      <title id="arrowRightTopIconTitle">Arrow Right Top</title>
       <path d="M19 13V5h-8" /> <path strokeLinecap="round" d="M19 5l-1 1" />
       <path d="M18 6L5 19" />
     </svg>
