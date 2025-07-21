@@ -38,6 +38,9 @@ function ProjectSection() {
           </div>
         </div>
         <div className="space-y-4 text-justify">
+          <p className="text-center text-lg font-semibold">
+            Project Description
+          </p>
           <p>
             This project was my first venture into independent development,
             created specifically to escape "tutorial hell." Inspired by my
@@ -46,7 +49,7 @@ function ProjectSection() {
             project is a dynamic image gallery with features for user-interest
             based content.
           </p>
-          <p className="text-center font-semibold">
+          <p className="text-center text-lg font-semibold">
             Key Technical Challenges & Learnings
           </p>
           <p>

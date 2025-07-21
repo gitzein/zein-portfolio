@@ -13,7 +13,7 @@ function SideNav({ scrollYProgress }: PropsType) {
         <div className="w-fit max-md:hidden">
           <ThemeButton />
         </div>
-        <div className="relative rounded-md bg-neutral-100/20 px-2 py-1 backdrop-blur-sm">
+        <div className="relative rounded-md bg-yellow-100/20 px-2 py-1 backdrop-blur-sm dark:bg-violet-100/20">
           <nav>
             <ul className="space-y-4 text-center">
               <li>
