@@ -10,6 +10,7 @@ import useTheme from "./hooks/useTheme";
 import { cn } from "./lib/utils";
 import SectionsWrapper from "./components/layout/SectionsWrapper";
 import CertificateSection from "./components/section/CertificateSection";
+import ScrollIndicatorX from "./components/ScrollIndicatorX";
 
 function App() {
   const [theme] = useTheme();
@@ -27,6 +28,7 @@ function App() {
           <ThemeButton />
         </div>
         <SideNav scrollYProgress={scrollYProgress} />
+        <ScrollIndicatorX scrollYProgress={scrollYProgress} />
         <AboutSection />
         <TechSection />
         <ProjectSection />
