@@ -46,8 +46,8 @@ function SideNav({ scrollYProgress }: PropsType) {
                   width: 2,
                   translateX: "-50%",
                   originY: 0,
-                  backgroundColor: "#c4b4ff",
                 }}
+                className="bg-yellow-500/50 dark:bg-violet-400/50"
               />
               <Ping />
               <Ping />

@@ -14,7 +14,7 @@ function SectionContainer({ children, className, title, id }: PropsType) {
     <section
       id={id}
       className={cn(
-        "flex flex-col items-center gap-8 lg:min-h-screen lg:gap-4",
+        "flex flex-col items-center justify-center gap-8 lg:h-screen",
         className,
       )}
     >
@@ -30,7 +30,7 @@ function SectionContainer({ children, className, title, id }: PropsType) {
           sequential
         />
       )}
-      <div className="flex flex-1 justify-center lg:items-center">
+      <div className="flex w-full justify-center lg:items-center">
         {children}
       </div>
     </section>
