@@ -7,15 +7,10 @@ import {
 } from "motion/react";
 import { type JSX, useEffect, useRef, useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
+import type { CarouselItem } from "../lib/types";
+import { CAROUSEL_ITEMS } from "../lib/constants";
 
-// replace icons with your own if needed
-
-export interface CarouselItem {
-  title: string;
-  description?: string;
-  id: number;
-  imageSrc: string;
-}
+// src: https://reactbits.dev/components/carousel
 
 export interface CarouselProps {
   items?: CarouselItem[];
@@ -27,20 +22,6 @@ export interface CarouselProps {
   round?: boolean;
 }
 
-const DEFAULT_ITEMS: CarouselItem[] = [
-  {
-    title: "freeCodeCamp's JavaScript Algorithms and Data Structures",
-    id: 1,
-    imageSrc: "/assets/freeCodeCampCertificate.png",
-  },
-  {
-    title: "TOEFL",
-    description: "score: 524",
-    id: 2,
-    imageSrc: "/assets/toeflCertificate.png",
-  },
-];
-
 const DRAG_BUFFER = 0;
 const VELOCITY_THRESHOLD = 500;
 const GAP = 16;
@@ -51,7 +32,7 @@ const SPRING_OPTIONS: Transition<any> | undefined = {
 };
 
 export default function Carousel({
-  items = DEFAULT_ITEMS,
+  items = CAROUSEL_ITEMS,
   autoplay = false,
   autoplayDelay = 3000,
   pauseOnHover = false,
@@ -59,7 +40,7 @@ export default function Carousel({
   round = false,
 }: CarouselProps): JSX.Element {
   const isSmallScreen = useMediaQuery("(max-width: 678px)");
-  const baseWidth = isSmallScreen ? 300 : 450;
+  const baseWidth = isSmallScreen ? 300 : 400;
   const containerPadding = 16;
   const itemWidth = baseWidth - containerPadding * 2;
   const trackItemOffset = itemWidth + GAP;
@@ -159,7 +140,7 @@ export default function Carousel({
       className={`relative overflow-hidden bg-gradient-to-b from-yellow-700/40 to-yellow-700/20 p-4 dark:bg-none ${
         round
           ? "rounded-full border border-neutral-100"
-          : "rounded-[24px] border border-neutral-100"
+          : "rounded-[24px] border-2 border-amber-900/40 dark:border-neutral-100"
       }`}
       style={{
         width: `${baseWidth}px`,
@@ -215,7 +196,7 @@ export default function Carousel({
                 />
               </div>
               <div className="flex w-full flex-col justify-end bg-amber-700/50 px-5 py-2 text-start dark:bg-violet-900/50">
-                <p className="line-clamp-2 text-sm font-black md:text-lg">
+                <p className="line-clamp-2 text-sm font-bold md:text-lg">
                   {item.title}
                 </p>
                 <p className="line-clamp-2 text-xs font-semibold md:text-sm">

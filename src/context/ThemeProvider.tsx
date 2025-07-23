@@ -2,10 +2,9 @@ import {
   createContext,
   useState,
   type Dispatch,
-  type ReactElement,
-  type ReactNode,
   type SetStateAction,
 } from "react";
+import type { ChildrenType } from "../lib/types";
 
 type ThemeContextType = [
   "dark" | "light",
@@ -23,8 +22,6 @@ if (isPrefersDarkTheme.matches) {
 const initialState: ThemeContextType = [initTheme, () => {}];
 
 const ThemeContext = createContext(initialState);
-
-type ChildrenType = { children?: ReactElement | ReactElement[] | ReactNode };
 
 export const ThemeProvider = ({ children }: ChildrenType) => {
   return (

@@ -1,5 +1,7 @@
 import { motion, type Variants } from "motion/react";
 import useTheme from "../../hooks/useTheme";
+import { useCallback } from "react";
+import useThrottle from "../../hooks/useThrottle";
 
 //src: (goat ed) https://www.youtube.com/watch?v=0Ihn7vylPlA , https://github.com/developedbyed/react-gradient-glow/blob/main/components/nav.tsx
 
@@ -69,11 +71,12 @@ const moonPath =
 export default function ThemeButton() {
   const [theme, setTheme] = useTheme();
 
+  const handleClick = useCallback(() => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  }, []);
+
   return (
-    <button
-      className="cursor-pointer"
-      onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
-    >
+    <button className="cursor-pointer" onClick={handleClick}>
       <motion.svg
         strokeWidth="4"
         strokeLinecap="round"

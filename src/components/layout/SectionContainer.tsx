@@ -1,23 +1,42 @@
-import type { ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import { cn } from "../../lib/utils";
 import DecryptedText from "../DecryptedText";
+import { useInView } from "motion/react";
+import useSectionSpy from "../../hooks/useSectionSpy";
+import type { SectionsIdType } from "../../lib/types";
 
 type PropsType = {
   children: ReactNode;
   className?: string;
   title?: string;
-  id: string;
+  id: SectionsIdType;
 };
 
 function SectionContainer({ children, className, title, id }: PropsType) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(ref, { margin: "0% 0% -50% 0%", amount: 0.8 });
+  const [_activeSection, setActiveSection] = useSectionSpy();
+
+  useEffect(() => {
+    if (isInView) {
+      setActiveSection(id);
+    }
+  }, [isInView, id]);
+
   return (
     <section
       id={id}
+      // ref={ref}
       className={cn(
-        "flex flex-col items-center justify-center gap-8 lg:h-screen",
+        "relative flex min-h-[50vh] flex-col items-center justify-center gap-8 lg:h-screen",
         className,
       )}
     >
+      {/* Sentinel */}
+      <div
+        ref={ref}
+        className="absolute top-16 -z-10 h-[25vh] w-full lg:top-[50vh] lg:translate-y-[-100%]"
+      ></div>
       {title && (
         <DecryptedText
           text={title}
