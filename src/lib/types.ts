@@ -17,3 +17,27 @@ export type SectionsIdType =
   | "project"
   | "edu"
   | "certificate";
+
+export type TechNameType =
+  | "Cloudinary"
+  | "Css"
+  | "ExpressJs"
+  | "Html"
+  | "JavaScript"
+  | "MongoDB"
+  | "NextJs"
+  | "NodeJs"
+  | "ReactJs"
+  | "Tailwindcss"
+  | "TypeScript";
+
+export type ProjectType = {
+  title: string;
+  imgSrc: string;
+  demoLink: string;
+  description: string;
+  challenges?: string;
+  techStack: TechNameType[];
+};
+
+export type ProjectsType = ProjectType[];

@@ -5,22 +5,26 @@ import { cn } from "../lib/utils";
 import ThemeButton from "./button/ThemeButton";
 import BurgerMenuSvg from "./svg/BurgerMenuSvg";
 import useSectionSpy from "../hooks/useSectionSpy";
+import useOutsideClick from "../hooks/useOutsideClick";
 
 function Header() {
   const [openDropdown, setOpenDropdown] = useState<boolean>(false);
   const [activeSection] = useSectionSpy();
 
-  const handleClick = useCallback(() => {
-    setOpenDropdown((prev) => !prev);
-  }, []);
   const handleClose = useCallback(() => {
     setOpenDropdown(false);
+  }, []);
+
+  const ref = useOutsideClick(handleClose);
+
+  const handleClick = useCallback(() => {
+    setOpenDropdown((prev) => !prev);
   }, []);
 
   const handleNavigate = useCallback(
     (e: React.MouseEvent<HTMLUListElement, MouseEvent>) => {
       if ((e.target as HTMLElement).tagName === "A") {
-        setOpenDropdown(false);
+        handleClose();
       }
     },
     [],
@@ -28,6 +32,7 @@ function Header() {
 
   return (
     <div
+      ref={openDropdown ? ref : undefined}
       className={cn("fixed top-0 z-30 w-full p-2 backdrop-blur-sm lg:hidden", {
         "bg-yellow-800/50 dark:bg-[#08000a7c]": openDropdown,
       })}

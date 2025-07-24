@@ -1,4 +1,4 @@
-import { useScroll } from "motion/react";
+import { useScroll, useSpring } from "motion/react";
 import SkyBackground from "./components/background/SkyBackground";
 import Header from "./components/Header";
 import SectionsWrapper from "./components/layout/SectionsWrapper";
@@ -15,6 +15,11 @@ import { cn } from "./lib/utils";
 function App() {
   const [theme] = useTheme();
   const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   return (
     <main
@@ -22,7 +27,7 @@ function App() {
         dark: theme === "dark",
       })}
     >
-      <ScrollIndicatorX scrollYProgress={scrollYProgress} />
+      <ScrollIndicatorX scaleX={scaleX} />
       <Header />
       <SkyBackground />
       <SectionsWrapper>
@@ -31,7 +36,7 @@ function App() {
         <ProjectSection />
         <EducationSection />
         <CertificateSection />
-        <SideNav scrollYProgress={scrollYProgress} />
+        <SideNav scaleX={scaleX} />
       </SectionsWrapper>
     </main>
   );

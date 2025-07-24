@@ -1,5 +1,3 @@
-import type { ReactNode } from "react";
-import { cn } from "../../lib/utils";
 import {
   motion,
   type TargetAndTransition,
@@ -7,11 +5,15 @@ import {
   type VariantLabels,
   type ViewportOptions,
 } from "motion/react";
+import type { TechNameType } from "../../lib/types";
+import { cn } from "../../lib/utils";
+import { TECH_ICON } from "./Technologies";
+import Technology from "./Technology";
 
 type PropsType = {
   categoryName: string;
   className?: string;
-  children: ReactNode;
+  techStack: TechNameType[];
 };
 
 const initDivStyle: boolean | TargetAndTransition | VariantLabels | undefined =
@@ -31,13 +33,14 @@ const inViewDivStyle: TargetAndTransition | VariantLabels | undefined = {
 
 const divViewport: ViewportOptions | undefined = {
   margin: "-10% 0px -10% 0px",
+  once: true,
 };
 const divTransition: Transition<any> | undefined = {
   ease: "easeIn",
   duration: 0.8,
 };
 
-function TechCategory({ categoryName, children, className }: PropsType) {
+function TechCategory({ categoryName, className, techStack }: PropsType) {
   return (
     <motion.div
       initial={initDivStyle}
@@ -47,7 +50,11 @@ function TechCategory({ categoryName, children, className }: PropsType) {
       className={cn("space-y-2", className)}
     >
       <p>{categoryName}</p>
-      <div className="technologies-container">{children}</div>
+      <div className="technologies-container">
+        {techStack.map((v) => (
+          <Technology name={TECH_ICON[v].name} children={TECH_ICON[v].icon} />
+        ))}
+      </div>
     </motion.div>
   );
 }

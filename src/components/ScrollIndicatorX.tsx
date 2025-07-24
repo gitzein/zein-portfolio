@@ -1,15 +1,15 @@
 import { motion, MotionValue } from "motion/react";
 
 type PropsType = {
-  scrollYProgress: MotionValue<number>;
+  scaleX: MotionValue<number>;
 };
 
-function ScrollIndicatorX({ scrollYProgress }: PropsType) {
+function ScrollIndicatorX({ scaleX }: PropsType) {
   return (
     <motion.div
       id="scroll-indicator"
       style={{
-        scaleX: scrollYProgress,
+        scaleX,
         position: "fixed",
         top: 0,
         left: 0,

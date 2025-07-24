@@ -6,10 +6,10 @@ import useSectionSpy from "../hooks/useSectionSpy";
 import { cn } from "../lib/utils";
 
 type PropsType = {
-  scrollYProgress: MotionValue<number>;
+  scaleX: MotionValue<number>;
 };
 
-function SideNav({ scrollYProgress }: PropsType) {
+function SideNav({ scaleX }: PropsType) {
   const [activeSection] = useSectionSpy();
 
   return (
@@ -42,7 +42,7 @@ function SideNav({ scrollYProgress }: PropsType) {
           <motion.div
             id="scroll-indicator"
             style={{
-              scaleY: scrollYProgress,
+              scaleY: scaleX,
               position: "absolute",
               top: "10%",
               right: "-1rem",
