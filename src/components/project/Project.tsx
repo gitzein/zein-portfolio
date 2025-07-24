@@ -1,6 +1,6 @@
+import { TECH_ICON } from "../../lib/constants";
 import type { ProjectType } from "../../lib/types";
 import ArrowTopRightSvg from "../svg/ArrowTopRightSvg";
-import { TECH_ICON } from "../technologies/Technologies";
 import Technology from "../technologies/Technology";
 
 function Project({

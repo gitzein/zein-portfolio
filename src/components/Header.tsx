@@ -24,7 +24,7 @@ function Header() {
   const handleNavigate = useCallback(
     (e: React.MouseEvent<HTMLUListElement, MouseEvent>) => {
       if ((e.target as HTMLElement).tagName === "A") {
-        handleClose();
+        setOpenDropdown(false);
       }
     },
     [],

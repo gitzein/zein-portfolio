@@ -1,3 +1,15 @@
+import type { ReactElement } from "react";
+import CloudinarySvg from "../components/svg/CloudinarySvg";
+import CssSvg from "../components/svg/CssSvg";
+import ExpressjsSvg from "../components/svg/ExpressjsSvg";
+import HtmlSvg from "../components/svg/HtmlSvg";
+import JavascriptSvg from "../components/svg/JavascriptSvg";
+import MongoDBSvg from "../components/svg/MongoDBSvg";
+import NextjsSvg from "../components/svg/NextjsSvg";
+import NodejsSvg from "../components/svg/NodejsSvg";
+import ReactSvg from "../components/svg/ReactSvg";
+import TailwindSvg from "../components/svg/TailwindSvg";
+import TypescriptSvg from "../components/svg/TypescriptSvg";
 import type { CarouselItem, ProjectsType, TechNameType } from "./types";
 
 export const CAROUSEL_ITEMS: CarouselItem[] = [
@@ -71,3 +83,20 @@ export const TECH_CATEGORIES: {
     techStack: ["NodeJs", "ExpressJs"],
   },
 ];
+
+export const TECH_ICON: Record<
+  TechNameType,
+  { icon: ReactElement; name: TechNameType }
+> = {
+  Cloudinary: { icon: CloudinarySvg({}), name: "Cloudinary" },
+  Css: { icon: CssSvg({}), name: "Css" },
+  ExpressJs: { icon: ExpressjsSvg({}), name: "ExpressJs" },
+  Html: { icon: HtmlSvg({}), name: "Html" },
+  JavaScript: { icon: JavascriptSvg({}), name: "JavaScript" },
+  MongoDB: { icon: MongoDBSvg({}), name: "MongoDB" },
+  NextJs: { icon: NextjsSvg({}), name: "NextJs" },
+  NodeJs: { icon: NodejsSvg({}), name: "NodeJs" },
+  ReactJs: { icon: ReactSvg({}), name: "ReactJs" },
+  Tailwindcss: { icon: TailwindSvg({}), name: "Tailwindcss" },
+  TypeScript: { icon: TypescriptSvg({}), name: "TypeScript" },
+};

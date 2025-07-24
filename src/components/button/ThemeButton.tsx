@@ -1,7 +1,6 @@
 import { motion, type Variants } from "motion/react";
-import useTheme from "../../hooks/useTheme";
 import { useCallback } from "react";
-import useThrottle from "../../hooks/useThrottle";
+import useTheme from "../../hooks/useTheme";
 
 //src: (goat ed) https://www.youtube.com/watch?v=0Ihn7vylPlA , https://github.com/developedbyed/react-gradient-glow/blob/main/components/nav.tsx
 
@@ -73,7 +72,7 @@ export default function ThemeButton() {
 
   const handleClick = useCallback(() => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
-  }, []);
+  }, [setTheme]);
 
   return (
     <button className="cursor-pointer" onClick={handleClick}>

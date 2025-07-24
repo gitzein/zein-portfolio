@@ -7,8 +7,8 @@ import {
 } from "motion/react";
 import type { TechNameType } from "../../lib/types";
 import { cn } from "../../lib/utils";
-import { TECH_ICON } from "./Technologies";
 import Technology from "./Technology";
+import { TECH_ICON } from "../../lib/constants";
 
 type PropsType = {
   categoryName: string;

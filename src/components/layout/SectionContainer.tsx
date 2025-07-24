@@ -21,7 +21,7 @@ function SectionContainer({ children, className, title, id }: PropsType) {
     if (isInView) {
       setActiveSection(id);
     }
-  }, [isInView, id]);
+  }, [isInView, id, setActiveSection]);
 
   return (
     <section
