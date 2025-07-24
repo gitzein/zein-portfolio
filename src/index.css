@@ -45,12 +45,6 @@ html {
 
 /* ref starfalls: https://codesandbox.io/p/sandbox/css-shooting-stars-animation-w96ut?file=%2Fstyle.css%3A26%2C6 */
 
-.background-star {
-  background-image: url("/assets/asfalt-light.png");
-  background-size: 500px;
-  background-color: #17111d;
-}
-
 .star-container {
   position: absolute;
   overflow: hidden;
