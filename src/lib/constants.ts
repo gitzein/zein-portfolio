@@ -16,13 +16,13 @@ export const CAROUSEL_ITEMS: CarouselItem[] = [
   {
     title: "freeCodeCamp's JavaScript Algorithms and Data Structures",
     id: 1,
-    imageSrc: "/assets/freeCodeCampCertificate.png",
+    imageSrc: "./assets/freeCodeCampCertificate.png",
   },
   {
     title: "TOEFL",
     description: "score: 524",
     id: 2,
-    imageSrc: "/assets/toeflCertificate.png",
+    imageSrc: "./assets/toeflCertificate.png",
   },
 ];
 
@@ -52,7 +52,7 @@ export const NAV_LINKS = [
 export const PROJECTS: ProjectsType = [
   {
     title: "Digist: a photo sharing platform",
-    imgSrc: "/assets/digist-homepage.jpg",
+    imgSrc: "./assets/digist-homepage.jpg",
     demoLink: "https://digist-web-app.vercel.app/",
     description:
       "This project was my first venture into independent development, created specifically to escape 'tutorial hell.' Inspired by my long-time favorite platform, Pinterest, my goal was to build a visually engaging, image-focused web application. The core of this project is a dynamic image gallery with features for user-interest based content.",

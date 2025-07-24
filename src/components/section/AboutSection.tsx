@@ -47,7 +47,7 @@ function AboutSection() {
           ))}
         </div>
         <a
-          href="/assets/zein-resume.pdf"
+          href="./assets/zein-resume.pdf"
           download={"zein-resume.pdf"}
           className="rounded-4xl border-2 border-yellow-400/50 bg-yellow-400/50 px-4 py-2 font-semibold transition-colors duration-300 hover:bg-yellow-300/50 dark:border-violet-500/60 dark:bg-violet-500/50 dark:hover:bg-violet-400/50"
         >
