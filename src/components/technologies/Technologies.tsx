@@ -21,10 +21,11 @@ import TechCategory from "./TechCategory";
 function Technologies() {
   return (
     <div className="flex h-full flex-col items-center justify-center gap-4 font-semibold lg:text-base">
-      {TECH_CATEGORIES.map((category) => (
+      {TECH_CATEGORIES.map((category, i) => (
         <TechCategory
           categoryName={category.name}
           techStack={category.techStack}
+          key={i}
         />
       ))}
     </div>

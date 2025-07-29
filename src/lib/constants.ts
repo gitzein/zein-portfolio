@@ -11,6 +11,7 @@ import ReactSvg from "../components/svg/ReactSvg";
 import TailwindSvg from "../components/svg/TailwindSvg";
 import TypescriptSvg from "../components/svg/TypescriptSvg";
 import type { CarouselItem, ProjectsType, TechNameType } from "./types";
+import type { TargetAndTransition, Transition, VariantLabels, ViewportOptions } from "motion";
 
 export const CAROUSEL_ITEMS: CarouselItem[] = [
   {
@@ -99,4 +100,29 @@ export const TECH_ICON: Record<
   ReactJs: { icon: ReactSvg({}), name: "ReactJs" },
   Tailwindcss: { icon: TailwindSvg({}), name: "Tailwindcss" },
   TypeScript: { icon: TypescriptSvg({}), name: "TypeScript" },
+};
+
+export const initDivStyle: boolean | TargetAndTransition | VariantLabels | undefined =
+  {
+    opacity: 0,
+    filter: "blur(0.2rem)",
+    translateY: "-15px",
+    scale: 0.8,
+  };
+
+export const divAnimation: TargetAndTransition | VariantLabels | undefined = {
+  opacity: 1,
+  filter: "none",
+  translateY: "0px",
+  scale: 1,
+};
+
+export const divTransition: Transition<any> | undefined = {
+  ease: "easeIn",
+  duration: 0.8,
+};
+
+export const divViewport: ViewportOptions | undefined = {
+  margin: "-10% 0px -10% 0px",
+  once: true,
 };

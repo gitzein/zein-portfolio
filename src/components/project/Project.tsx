@@ -24,10 +24,11 @@ function Project({
         <div className="flex flex-col gap-4 md:h-full">
           <p className="text-xl font-semibold md:h-full">{title}</p>
           <div className="tech-stack-container flex-wrap">
-            {techStack.map((tech) => (
+            {techStack.map((tech, i) => (
               <Technology
                 children={TECH_ICON[tech].icon}
                 name={TECH_ICON[tech].name}
+                key={i}
               />
             ))}
           </div>
