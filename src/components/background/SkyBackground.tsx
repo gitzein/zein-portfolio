@@ -18,7 +18,7 @@ function SkyBackground() {
   return (
     <>
       <MeteorShower />
-      <Aurora amplitude={1.5} speed={0.5} blend={1} colorStops={auroraColor} />
+      <Aurora amplitude={2} speed={0.5} blend={0.5} colorStops={auroraColor} />
       <SkyGradient />
     </>
   );

@@ -37,12 +37,13 @@ function AboutSection() {
   return (
     <SectionContainer id="about" className="justify-center">
       <div className="flex min-h-screen flex-col items-center justify-center gap-8">
-        <div className="flex items-center justify-center gap-1 flex-wrap text-center text-5xl font-bold text-neutral-100 md:text-6xl lg:text-7xl">
+        <div className="flex items-center justify-center gap-2 flex-wrap text-center text-5xl font-bold text-neutral-100 md:text-6xl lg:text-7xl">
           {NAME.split(" ").map((v, i) => (
             <motion.span
               initial={initDivStyle}
               animate={divAnimation}
               transition={{ ...divTransition, delay: i * 0.2 }}
+              key={i}
             >
               {v}
             </motion.span>
@@ -64,8 +65,8 @@ function AboutSection() {
           transition={{ ...divTransition, delay: 1.4 }}
           className="flex justify-center gap-4 [&_svg]:size-9"
         >
-          {CONTACT_INFO_LINKS.map((info) => (
-            <a target="_blank" href={info.href}>
+          {CONTACT_INFO_LINKS.map((info, i) => (
+            <a target="_blank" href={info.href} key={i}>
               {info.icon}
             </a>
           ))}
