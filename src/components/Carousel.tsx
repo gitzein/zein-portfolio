@@ -212,8 +212,7 @@ export default function Carousel({
                 <div className="w-full overflow-hidden">
                   <img
                     src={item.imageSrc}
-                    alt="toeflCertificate"
-                    loading="lazy"
+                    alt={item.title}
                     className="object-cover"
                   />
                 </div>
