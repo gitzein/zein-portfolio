@@ -102,7 +102,7 @@ export const TECH_ICON: Record<
   TypeScript: { icon: TypescriptSvg({}), name: "TypeScript" },
 };
 
-export const initDivStyle: boolean | TargetAndTransition | VariantLabels | undefined =
+export const INIT_DIV_STYLE: boolean | TargetAndTransition | VariantLabels | undefined =
   {
     opacity: 0,
     filter: "blur(0.2rem)",
@@ -110,19 +110,19 @@ export const initDivStyle: boolean | TargetAndTransition | VariantLabels | undef
     scale: 0.8,
   };
 
-export const divAnimation: TargetAndTransition | VariantLabels | undefined = {
+export const DIV_ANIMATION: TargetAndTransition | VariantLabels | undefined = {
   opacity: 1,
   filter: "none",
   translateY: "0px",
   scale: 1,
 };
 
-export const divTransition: Transition<any> | undefined = {
+export const DIV_TRANSITION: Transition<any> | undefined = {
   ease: "easeIn",
   duration: 0.8,
 };
 
-export const divViewport: ViewportOptions | undefined = {
+export const DIV_VIEWPORT: ViewportOptions | undefined = {
   margin: "-10% 0px -10% 0px",
   once: true,
 };

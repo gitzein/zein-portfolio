@@ -1,6 +1,10 @@
 import { motion } from "motion/react";
 import type { ReactNode } from "react";
-import { divAnimation, divTransition, initDivStyle } from "../../lib/constants";
+import {
+  DIV_ANIMATION,
+  DIV_TRANSITION,
+  INIT_DIV_STYLE,
+} from "../../lib/constants";
 import { calculateAge } from "../../lib/utils";
 import SectionContainer from "../layout/SectionContainer";
 import GithubSvg from "../svg/GithubSvg";
@@ -38,9 +42,9 @@ function AboutSection() {
         <div className="flex flex-wrap items-center justify-center gap-2 text-center text-5xl font-bold text-neutral-100 md:text-6xl lg:text-7xl">
           {NAME.split(" ").map((v, i) => (
             <motion.span
-              initial={initDivStyle}
-              animate={divAnimation}
-              transition={{ ...divTransition, delay: i * 0.2 }}
+              initial={INIT_DIV_STYLE}
+              animate={DIV_ANIMATION}
+              transition={{ ...DIV_TRANSITION, delay: i * 0.2 }}
               key={i}
             >
               {v}
@@ -48,9 +52,9 @@ function AboutSection() {
           ))}
         </div>
         <motion.div
-          initial={initDivStyle}
-          animate={divAnimation}
-          transition={{ ...divTransition, delay: 1 }}
+          initial={INIT_DIV_STYLE}
+          animate={DIV_ANIMATION}
+          transition={{ ...DIV_TRANSITION, delay: 1 }}
           className="text-center"
         >
           <p>Front-end Developer</p>
@@ -58,9 +62,9 @@ function AboutSection() {
           <p>{calculateAge("March 25, 2000")} years old</p>
         </motion.div>
         <motion.div
-          initial={initDivStyle}
-          animate={divAnimation}
-          transition={{ ...divTransition, delay: 1.4 }}
+          initial={INIT_DIV_STYLE}
+          animate={DIV_ANIMATION}
+          transition={{ ...DIV_TRANSITION, delay: 1.4 }}
           className="flex justify-center gap-4 [&_svg]:size-9"
         >
           {CONTACT_INFO_LINKS.map((info, i) => (
@@ -70,9 +74,9 @@ function AboutSection() {
           ))}
         </motion.div>
         <motion.a
-          initial={initDivStyle}
-          animate={divAnimation}
-          transition={{ ...divTransition, delay: 1.8 }}
+          initial={INIT_DIV_STYLE}
+          animate={DIV_ANIMATION}
+          transition={{ ...DIV_TRANSITION, delay: 1.8 }}
           href="./assets/zein-resume2.pdf"
           download={"zein-resume2.pdf"}
           className="rounded-4xl border-2 border-yellow-400/50 bg-yellow-400/50 px-4 py-2 font-semibold transition-colors duration-300 hover:bg-yellow-300/50 dark:border-violet-500/60 dark:bg-violet-500/50 dark:hover:bg-violet-400/50"

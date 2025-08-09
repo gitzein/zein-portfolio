@@ -25,7 +25,7 @@ function SideNav({ scaleX }: PropsType) {
                 <li key={i} className="relative">
                   <a
                     href={"#" + link.id}
-                    className={cn("opacity-75", {
+                    className={cn("opacity-60", {
                       "opacity-100": link.id === activeSection,
                     })}
                   >
