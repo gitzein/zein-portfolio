@@ -1,23 +1,28 @@
+@import "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap";
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @config "../tailwind.config.ts";
 
+@theme {
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 .technologies-container {
-  @apply flex w-full items-center justify-center gap-4 text-xs [&_svg]:size-8 [&_svg]:fill-neutral-100 sm:[&_svg]:size-10 xl:[&_svg]:size-12 dark:[&_svg]:fill-neutral-100;
+  @apply flex w-full items-center justify-center gap-4 text-xs [&_svg]:size-8 [&_svg]:fill-neutral-100 [&_svg]:opacity-75 sm:[&_svg]:size-10 xl:[&_svg]:size-12 dark:[&_svg]:fill-neutral-100;
 }
 
 .tech-stack-container {
-  @apply flex w-full items-center gap-2 text-xs [&_svg]:size-5 [&_svg]:fill-neutral-100 lg:[&_svg]:size-6 dark:[&_svg]:fill-neutral-100;
+  @apply flex w-full items-center gap-2 text-xs [&_svg]:size-5 [&_svg]:fill-neutral-100 [&_svg]:opacity-75 lg:[&_svg]:size-6 dark:[&_svg]:fill-neutral-100;
 }
 
 .technology-container {
-  @apply flex flex-col items-center justify-center text-center;
+  @apply flex flex-col items-center justify-center gap-2 text-center font-normal;
 }
 
 .main-container {

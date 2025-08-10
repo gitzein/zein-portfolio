@@ -23,7 +23,7 @@ function App() {
 
   return (
     <main
-      className={cn(`main-container`, {
+      className={cn(`main-container font-space-grotesk`, {
         dark: theme === "dark",
       })}
     >

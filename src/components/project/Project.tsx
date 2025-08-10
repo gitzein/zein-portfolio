@@ -14,7 +14,7 @@ function Project({
   return (
     <div className="flex flex-col gap-6">
       <div className="flex w-full gap-6 max-md:flex-col max-md:items-center max-md:justify-center">
-        <div className="h-44 w-66 bg-yellow-700/30 dark:bg-violet-400/50">
+        <div className="h-44 w-66">
           <img
             src={imgSrc}
             alt={title}
