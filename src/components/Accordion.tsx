@@ -33,13 +33,8 @@ function Accordion({ data }: PropsType) {
           <button
             onClick={handleClick}
             data-index={(i + 1).toString()}
-            className="flex w-full cursor-pointer items-center justify-center gap-2 p-2 font-semibold underline-offset-1 hover:underline lg:text-lg [&_svg]:size-5 [&_svg]:fill-neutral-100"
+            className="flex w-full cursor-pointer items-center justify-between gap-1 p-2 font-semibold underline-offset-1 hover:underline lg:text-lg [&_svg]:size-5 [&_svg]:fill-neutral-100"
           >
-            <ArrowDownSvg
-              className={cn("pointer-events-none transition-all duration-500", {
-                "rotate-180": active === i + 1,
-              })}
-            />
             {v.title}
             <ArrowDownSvg
               className={cn("pointer-events-none transition-all duration-500", {

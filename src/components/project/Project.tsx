@@ -20,15 +20,6 @@ function Project({
     },
   ];
 
-  // useEffect(() => {
-  //   if (challenges) {
-  //     data.push({
-  //       title: "Key Technical Challenges & Learnings",
-  //       body: challenges,
-  //     });
-  //   }
-  // }, [challenges]);
-
   return (
     <div className="flex w-full flex-col gap-6">
       <div className="flex w-full gap-6 max-md:flex-col max-md:items-center max-md:justify-center">
@@ -64,18 +55,6 @@ function Project({
         </div>
       </div>
       <Accordion data={data} />
-      {/* <div className="space-y-4 text-justify">
-        <p className="text-center text-lg font-semibold">Project Description</p>
-        <p>{description}</p>
-        {challenges && (
-          <>
-            <p className="text-center text-lg font-semibold">
-              Key Technical Challenges & Learnings
-            </p>
-            <p>{challenges}</p>
-          </>
-        )}
-      </div> */}
     </div>
   );
 }
