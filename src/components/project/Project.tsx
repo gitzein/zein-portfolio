@@ -1,5 +1,7 @@
+import { useEffect, useMemo } from "react";
 import { TECH_ICON } from "../../lib/constants";
-import type { ProjectType } from "../../lib/types";
+import type { AccordionDataType, ProjectType } from "../../lib/types";
+import Accordion from "../Accordion";
 import ArrowTopRightSvg from "../svg/ArrowTopRightSvg";
 import Technology from "../technologies/Technology";
 
@@ -11,8 +13,25 @@ function Project({
   title,
   challenges,
 }: ProjectType) {
+  const data: AccordionDataType = [
+    { title: "Project Description", body: description },
+    {
+      title: "Key Technical Challenges & Learnings",
+      body: challenges!,
+    },
+  ];
+
+  // useEffect(() => {
+  //   if (challenges) {
+  //     data.push({
+  //       title: "Key Technical Challenges & Learnings",
+  //       body: challenges,
+  //     });
+  //   }
+  // }, [challenges]);
+
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex w-full flex-col gap-6">
       <div className="flex w-full gap-6 max-md:flex-col max-md:items-center max-md:justify-center">
         <div className="h-44 w-66">
           <img
@@ -45,7 +64,8 @@ function Project({
           </a>
         </div>
       </div>
-      <div className="space-y-4 text-justify">
+      <Accordion data={data} />
+      {/* <div className="space-y-4 text-justify">
         <p className="text-center text-lg font-semibold">Project Description</p>
         <p>{description}</p>
         {challenges && (
@@ -56,7 +76,7 @@ function Project({
             <p>{challenges}</p>
           </>
         )}
-      </div>
+      </div> */}
     </div>
   );
 }

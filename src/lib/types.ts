@@ -41,3 +41,8 @@ export type ProjectType = {
 };
 
 export type ProjectsType = ProjectType[];
+
+export type AccordionDataType = {
+  title: string;
+  body: string;
+}[];

@@ -28,15 +28,12 @@ function SectionContainer({ children, className, title, id }: PropsType) {
       id={id}
       // ref={ref}
       className={cn(
-        "relative flex min-h-[50vh] flex-col items-center justify-center gap-8 lg:h-screen",
+        "relative flex min-h-[50vh] flex-col items-center justify-center gap-8",
         className,
       )}
     >
       {/* Sentinel */}
-      <div
-        ref={ref}
-        className="absolute top-16 -z-10 h-[25vh] w-full lg:top-[50vh] lg:translate-y-[-100%]"
-      ></div>
+      <div ref={ref} className="absolute top-0 -z-10 h-[25vh] w-full"></div>
       {title && (
         <DecryptedText
           text={title}
