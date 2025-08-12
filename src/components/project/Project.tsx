@@ -1,4 +1,3 @@
-import { useEffect, useMemo } from "react";
 import { TECH_ICON } from "../../lib/constants";
 import type { AccordionDataType, ProjectType } from "../../lib/types";
 import Accordion from "../Accordion";
