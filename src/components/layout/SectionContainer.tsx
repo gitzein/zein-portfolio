@@ -28,7 +28,7 @@ function SectionContainer({ children, className, title, id }: PropsType) {
       id={id}
       // ref={ref}
       className={cn(
-        "relative flex min-h-[50vh] flex-col items-center justify-center gap-8",
+        "relative flex max-h-screen min-h-[50vh] shrink flex-col items-center justify-center gap-8 lg:h-screen",
         className,
       )}
     >

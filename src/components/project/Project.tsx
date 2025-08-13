@@ -22,7 +22,7 @@ function Project({
 
   return (
     <div className="flex w-full flex-col gap-6">
-      <div className="flex w-full gap-6 max-md:flex-col max-md:items-center max-md:justify-center">
+      <div className="flex w-full gap-6 max-lg:flex-col max-lg:items-center max-lg:justify-center">
         <div className="h-44 w-66">
           <img
             src={imgSrc}
@@ -30,8 +30,8 @@ function Project({
             className="h-full w-full object-contain"
           />
         </div>
-        <div className="flex flex-col gap-4 md:h-full">
-          <p className="text-xl font-semibold md:h-full">{title}</p>
+        <div className="flex flex-col gap-4 lg:h-full">
+          <p className="text-xl font-semibold lg:h-full">{title}</p>
           <div className="tech-stack-container flex-wrap">
             {techStack.map((tech, i) => (
               <Technology
@@ -44,7 +44,7 @@ function Project({
           <a
             href={demoLink}
             target="_blank"
-            className="relative inline-block w-fit rounded-4xl border-2 border-yellow-400/50 transition-colors duration-300 hover:bg-yellow-300/50 max-md:mx-auto dark:border-violet-500/60 dark:hover:bg-violet-400/50 [&_svg]:size-4 [&_svg]:stroke-neutral-100"
+            className="relative inline-block w-fit rounded-4xl border-2 border-yellow-400/50 transition-colors duration-300 hover:bg-yellow-300/50 max-lg:mx-auto dark:border-violet-500/60 dark:hover:bg-violet-400/50 [&_svg]:size-4 [&_svg]:stroke-neutral-100"
           >
             <div className="absolute -top-2 -right-2 size-7 rounded-full bg-radial from-yellow-100 to-60% dark:from-violet-300"></div>
             <div className="flex h-full w-full items-center gap-1 px-4 py-2 text-lg font-semibold [&_svg]:size-6">
