@@ -11,6 +11,7 @@ function CloudinarySvg(props: SVGProps<SVGSVGElement>) {
       fill="inherit"
       {...props}
     >
+      <title>Cloudinary</title>
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"

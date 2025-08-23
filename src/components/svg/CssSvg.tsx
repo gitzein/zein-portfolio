@@ -11,10 +11,8 @@ function CssSvg(props: SVGProps<SVGSVGElement>) {
       aria-labelledby="css-logo-title css-logo-description"
       {...props}
     >
-      <title id="css-logo-title">CSS</title>
-      <desc id="css-logo-description">
-        A purple square with rounded corners and the letters CSS inside in white
-      </desc>
+      <title>CSS</title>
+
       <path
         fillRule="evenodd"
         clipRule="evenodd"
