@@ -22,7 +22,11 @@ function Header() {
   }, []);
 
   const handleNavigate = useCallback(
-    (e: React.MouseEvent<HTMLUListElement, MouseEvent>) => {
+    (
+      e:
+        | React.MouseEvent<HTMLUListElement, MouseEvent>
+        | React.TouchEvent<HTMLUListElement>,
+    ) => {
       if ((e.target as HTMLElement).tagName === "A") {
         setOpenDropdown(false);
       }
@@ -65,6 +69,7 @@ function Header() {
               <ul
                 className="text-center font-semibold"
                 onClick={handleNavigate}
+                onTouchEnd={handleNavigate}
               >
                 {NAV_LINKS.map((link, i) => (
                   <motion.li
