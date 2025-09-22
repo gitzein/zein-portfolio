@@ -10,6 +10,7 @@ import SectionContainer from "../layout/SectionContainer";
 import GithubSvg from "../svg/GithubSvg";
 import LinkedInSvg from "../svg/LinkedInSvg";
 import MailSvg from "../svg/MailSvg";
+import LeetcodeSvg from "../svg/LeetcodeSvg";
 
 const CONTACT_INFO_LINKS: {
   href: string;
@@ -20,6 +21,11 @@ const CONTACT_INFO_LINKS: {
     href: "https://github.com/gitzein",
     name: "github",
     icon: <GithubSvg />,
+  },
+  {
+    href: "https://leetcode.com/u/gitzein/",
+    name: "leetcode",
+    icon: <LeetcodeSvg />,
   },
   {
     href: "mailto:zeinfarhan2000@gmail.com",
@@ -65,7 +71,7 @@ function AboutSection() {
           initial={INIT_DIV_STYLE}
           animate={DIV_ANIMATION}
           transition={{ ...DIV_TRANSITION, delay: 1.4 }}
-          className="flex justify-center gap-4 [&_svg]:size-9"
+          className="flex justify-center gap-4 [&_svg]:size-9 [&_svg]:opacity-75"
         >
           {CONTACT_INFO_LINKS.map((info, i) => (
             <a target="_blank" href={info.href} key={i}>

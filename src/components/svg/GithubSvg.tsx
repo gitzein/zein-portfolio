@@ -11,7 +11,7 @@ function GithubSvg() {
       stroke="#ffffff"
     >
       <g>
-        <title>github</title> \
+        <title>github</title>
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
           <g transform="translate(-140.000000, -7559.000000)" fill="#ffffff">
             <g transform="translate(56.000000, 160.000000)">
