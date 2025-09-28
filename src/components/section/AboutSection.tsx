@@ -45,7 +45,7 @@ function AboutSection() {
   return (
     <SectionContainer id="about" className="justify-center">
       <div className="flex min-h-screen flex-col items-center justify-center gap-8">
-        <div className="flex flex-wrap items-center justify-center gap-2 text-center text-5xl font-bold text-neutral-100 md:text-6xl lg:text-7xl">
+        <div className="flex flex-wrap items-center justify-center gap-2 text-center text-5xl tracking-wide text-neutral-100 md:text-6xl lg:text-7xl">
           {NAME.split(" ").map((v, i) => (
             <motion.span
               initial={INIT_DIV_STYLE}
