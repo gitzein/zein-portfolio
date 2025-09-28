@@ -11,7 +11,12 @@ import ReactSvg from "../components/svg/ReactSvg";
 import TailwindSvg from "../components/svg/TailwindSvg";
 import TypescriptSvg from "../components/svg/TypescriptSvg";
 import type { CarouselItem, ProjectsType, TechNameType } from "./types";
-import type { TargetAndTransition, Transition, VariantLabels, ViewportOptions } from "motion";
+import type {
+  TargetAndTransition,
+  Transition,
+  VariantLabels,
+  ViewportOptions,
+} from "motion";
 
 export const CAROUSEL_ITEMS: CarouselItem[] = [
   {
@@ -37,7 +42,7 @@ export const NAV_LINKS = [
     id: "tech",
   },
   {
-    name: "Projects",
+    name: "Project",
     id: "project",
   },
   {
@@ -102,13 +107,16 @@ export const TECH_ICON: Record<
   TypeScript: { icon: TypescriptSvg({}), name: "TypeScript" },
 };
 
-export const INIT_DIV_STYLE: boolean | TargetAndTransition | VariantLabels | undefined =
-  {
-    opacity: 0,
-    filter: "blur(0.2rem)",
-    translateY: "-15px",
-    scale: 0.8,
-  };
+export const INIT_DIV_STYLE:
+  | boolean
+  | TargetAndTransition
+  | VariantLabels
+  | undefined = {
+  opacity: 0,
+  filter: "blur(0.2rem)",
+  translateY: "-15px",
+  scale: 0.8,
+};
 
 export const DIV_ANIMATION: TargetAndTransition | VariantLabels | undefined = {
   opacity: 1,

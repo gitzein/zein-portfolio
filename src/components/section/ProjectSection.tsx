@@ -4,7 +4,7 @@ import Project from "../project/Project";
 
 function ProjectSection() {
   return (
-    <SectionContainer id="project" title="Projects">
+    <SectionContainer id="project" title="Project">
       {PROJECTS.map((project, i) => (
         <Project {...project} key={i} />
       ))}
