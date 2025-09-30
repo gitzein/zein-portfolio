@@ -23,7 +23,7 @@ function TechCategory({ categoryName, className, techStack }: PropsType) {
       whileInView={DIV_ANIMATION}
       viewport={DIV_VIEWPORT}
       transition={DIV_TRANSITION}
-      className={cn("space-y-2", className)}
+      className={cn("space-y-4", className)}
     >
       <p>{categoryName}</p>
       <div className="technologies-container">

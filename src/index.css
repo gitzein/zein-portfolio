@@ -14,7 +14,7 @@ html {
 }
 
 .technologies-container {
-  @apply flex w-full items-center justify-center gap-4 text-xs [&_svg]:size-8 [&_svg]:fill-neutral-100 [&_svg]:opacity-75 sm:[&_svg]:size-10 xl:[&_svg]:size-12 dark:[&_svg]:fill-neutral-100;
+  @apply flex w-full items-center justify-center gap-4 text-xs [&_svg]:size-8 [&_svg]:fill-neutral-100 [&_svg]:opacity-75 sm:[&_svg]:size-9 xl:[&_svg]:size-10 dark:[&_svg]:fill-neutral-100;
 }
 
 .tech-stack-container {

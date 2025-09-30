@@ -23,9 +23,12 @@ function App() {
 
   return (
     <main
-      className={cn(`main-container font-space-grotesk`, {
-        dark: theme === "dark",
-      })}
+      className={cn(
+        `main-container font-space-grotesk transition-colors duration-800`,
+        {
+          dark: theme === "dark",
+        },
+      )}
     >
       <ScrollIndicatorX scaleX={scaleX} />
       <Header />
