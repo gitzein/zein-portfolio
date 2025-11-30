@@ -4,10 +4,12 @@ import Project from "../project/Project";
 
 function ProjectSection() {
   return (
-    <SectionContainer id="project" title="Project">
-      {PROJECTS.map((project, i) => (
-        <Project {...project} key={i} />
-      ))}
+    <SectionContainer id="project" title="Projects">
+      <div className="flex flex-col gap-8">
+        {PROJECTS.map((project, i) => (
+          <Project {...project} key={i} />
+        ))}
+      </div>
     </SectionContainer>
   );
 }

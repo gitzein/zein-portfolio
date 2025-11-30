@@ -151,7 +151,7 @@ export default function Carousel({
     <>
       <div
         ref={containerRef}
-        className={`relative overflow-hidden bg-gradient-to-b from-yellow-700/40 to-yellow-700/20 p-4 dark:bg-none ${
+        className={`bg-shade-light relative overflow-hidden p-4 dark:bg-none! ${
           round
             ? "rounded-full border border-neutral-100"
             : "rounded-[24px] border-2 border-amber-900/40 dark:border-neutral-100"

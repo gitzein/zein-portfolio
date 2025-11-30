@@ -66,6 +66,14 @@ export const PROJECTS: ProjectsType = [
       "One of the most valuable lessons from this project was the complexity of implementing a responsive masonry layout with infinite scroll. This required a deep understanding of DOM manipulation and performance optimization to ensure a smooth user experience as images loaded dynamically. It was a challenging yet rewarding experience that helped solidify my skills in building robust, interactive UIs.",
     techStack: ["NextJs", "TypeScript", "Tailwindcss", "MongoDB", "Cloudinary"],
   },
+  {
+    title: "Wordle Clone: Continuous Word Game",
+    imgSrc: "./assets/wordle.png",
+    demoLink: "https://gitzein.github.io/wordle-game/",
+    description:
+      "A full-featured, client-side implementation of the popular word-guessing game. This project showcases proficiency in front-end development, state management, and efficient data structure use. Players can instantly start a new, random puzzle after every game, providing continuous, unlimited playability.",
+    techStack: ["ReactJs", "TypeScript", "Tailwindcss"],
+  },
 ];
 
 export const TECH_CATEGORIES: {

@@ -2,7 +2,7 @@ import UMSvg from "../svg/UMSvg";
 
 function EducationCard() {
   return (
-    <div className="dark:divide-2 flex flex-col items-center justify-center gap-4 rounded-xl border-2 border-amber-900/40 bg-gradient-to-b from-yellow-700/40 to-yellow-700/20 p-4 dark:border-none dark:bg-none">
+    <div className="dark:divide-2 bg-shade-light flex flex-col items-center justify-center gap-4 rounded-xl p-4 ring-2 ring-amber-900/40 dark:bg-none! dark:ring-0!">
       <div className="[&_svg]:size-26 [&_svg]:fill-neutral-100 lg:[&_svg]:size-30">
         <UMSvg />
       </div>

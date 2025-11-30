@@ -28,7 +28,7 @@ function SectionContainer({ children, className, title, id }: PropsType) {
       id={id}
       // ref={ref}
       className={cn(
-        "relative flex max-h-screen min-h-[50vh] shrink flex-col items-center justify-center gap-8 lg:h-screen",
+        "relative flex min-h-[50vh] shrink flex-col items-center justify-center gap-8 lg:h-screen lg:max-h-screen",
         className,
       )}
     >
@@ -41,14 +41,15 @@ function SectionContainer({ children, className, title, id }: PropsType) {
           revealDirection="center"
           className="mt-4 text-center text-4xl tracking-wide md:text-5xl lg:text-6xl xl:text-7xl"
           encryptedClassName="mt-4 opacity-50 text-center tracking-wide text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
-          speed={100}
+          speed={50}
           useOriginalCharsOnly
           sequential
         />
+        // <p className="mt-4 text-center text-4xl tracking-wide md:text-5xl lg:text-6xl xl:text-7xl">
+        //   {title}
+        // </p>
       )}
-      <div className="flex w-full justify-center lg:items-center">
-        {children}
-      </div>
+      {children}
     </section>
   );
 }

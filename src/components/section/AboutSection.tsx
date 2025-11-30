@@ -50,7 +50,7 @@ function AboutSection() {
             <motion.span
               initial={INIT_DIV_STYLE}
               animate={DIV_ANIMATION}
-              transition={{ ...DIV_TRANSITION, delay: i * 0.2 }}
+              transition={{ ...DIV_TRANSITION, delay: i * 0.1 }}
               key={i}
             >
               {v}
@@ -60,7 +60,7 @@ function AboutSection() {
         <motion.div
           initial={INIT_DIV_STYLE}
           animate={DIV_ANIMATION}
-          transition={{ ...DIV_TRANSITION, delay: 1 }}
+          transition={{ ...DIV_TRANSITION, delay: 0.5 }}
           className="text-center"
         >
           <p>Front-end Developer</p>
@@ -70,7 +70,7 @@ function AboutSection() {
         <motion.div
           initial={INIT_DIV_STYLE}
           animate={DIV_ANIMATION}
-          transition={{ ...DIV_TRANSITION, delay: 1.4 }}
+          transition={{ ...DIV_TRANSITION, delay: 0.7 }}
           className="flex justify-center gap-4 [&_svg]:size-9 [&_svg]:opacity-75"
         >
           {CONTACT_INFO_LINKS.map((info, i) => (
@@ -82,7 +82,7 @@ function AboutSection() {
         <motion.a
           initial={INIT_DIV_STYLE}
           animate={DIV_ANIMATION}
-          transition={{ ...DIV_TRANSITION, delay: 1.8 }}
+          transition={{ ...DIV_TRANSITION, delay: 1 }}
           href="./assets/zein-resume2.pdf"
           download={"zein-resume2.pdf"}
           className="rounded-4xl border-2 border-yellow-400/50 bg-yellow-400/50 px-4 py-2 font-semibold transition-colors duration-300 hover:bg-yellow-300/50 dark:border-violet-500/60 dark:bg-violet-500/50 dark:hover:bg-violet-400/50"

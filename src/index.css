@@ -29,6 +29,10 @@ html {
   @apply relative w-full overflow-hidden bg-sky-800 bg-[url(/assets/stardust.png)] text-neutral-100 bg-blend-color-dodge dark:bg-[#08000a] dark:text-neutral-100 dark:bg-blend-normal;
 }
 
+.bg-shade-light {
+  @apply bg-gradient-to-b from-yellow-700/40 to-yellow-700/20;
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
   height: 6px;

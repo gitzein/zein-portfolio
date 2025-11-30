@@ -29,11 +29,14 @@ function Accordion({ data }: PropsType) {
   return (
     <div className="w-full">
       {data.map((v, i) => (
-        <div className="w-full border-b border-neutral-100" key={i}>
+        <div
+          className="w-full border-b border-neutral-100 max-sm:text-sm"
+          key={i}
+        >
           <button
             onClick={handleClick}
             data-index={(i + 1).toString()}
-            className="flex w-full cursor-pointer items-center justify-between gap-1 p-2 font-semibold underline-offset-1 hover:underline lg:text-lg [&_svg]:size-5 [&_svg]:fill-neutral-100"
+            className="flex w-full cursor-pointer items-center justify-between gap-1 p-2 underline-offset-1 hover:underline [&_svg]:size-5 [&_svg]:fill-neutral-100"
           >
             {v.title}
             <ArrowDownSvg
